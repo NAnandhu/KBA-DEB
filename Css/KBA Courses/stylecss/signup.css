@@ -1,0 +1,51 @@
+.heading{
+    font-size: 50px;
+    color: rgb(219, 13, 247);
+    text-align: center;
+       
+       padding-top: 20px;
+}
+
+.containerS1{
+
+    width: 600px;
+    height: 900px;
+    background-color: white;
+    margin: auto;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    box-shadow: 10px 5px 5px rgba(121, 118, 118, 0.432);
+    border-radius: 10px;
+    
+}
+.login{
+    margin-top: 20px;
+    padding-left: 75px;
+    padding-top: 20px;
+}
+.select{
+
+    width: 400px;
+    height: 40px;
+}
+input{
+
+    width: 400px;
+    height: 40px;
+}
+.text{
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left:80px;
+}
+.button{
+    margin-top: 20px;
+    margin-left: 120px;
+    padding-left: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(187, 39, 245);
+    color: white;
+    border: none;
+    
+}

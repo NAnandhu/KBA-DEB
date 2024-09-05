@@ -1,0 +1,12 @@
+.coloum{
+    float: left;
+    height: auto;
+    width: 30%;
+    border-left: 1px solid red;
+    margin-right: 20px;
+   
+}
+div img{
+    width: 500px;
+    height: 400px;
+}

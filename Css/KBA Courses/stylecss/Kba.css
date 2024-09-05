@@ -1,0 +1,191 @@
+/*home page NavBar*/
+.navbar{
+    width:auto;
+    height: 100px;
+    box-shadow: 10px 10px 5px rgba(10, 10, 10, 0.25);
+   
+   
+    
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+
+
+    
+}
+.navbar ul li{
+    font-size: 20px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.div3{
+    color: rgb(245, 6, 193);
+    width: auto;
+    height: 300px;
+    background-color: rgb(242, 177, 248);
+    padding-top: 20px;
+}
+.div4{
+    padding-left: 30px;
+    box-shadow: 30px;
+    width: 620px;
+    height: 500px;
+    background-color: #f8a3f4;
+    padding-top: 10px; 
+    font-size: 20px;
+    border-style: solid;
+   
+
+}
+.div5{
+   padding-left: 20px;
+   padding-right: 20px;
+
+    box-shadow: 30px;
+    width: 620px;
+    height: 500px;
+    background-color: #f8a3f4;
+    padding-top: 10px;
+    font-size: 20px;
+    border-style: solid;
+   
+
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    margin-left: 200px;
+    font-size: 15px;
+
+}
+/* .btn2{
+    width: 400px;
+    height: 40px;
+    background-color: #ff2af4;
+    border-radius: 20px;
+    margin-top: 500px;
+     margin-left:40px;
+   
+} */
+.img{
+margin-left: 20px;
+margin-right: 20px;
+
+padding-right: 20px;
+
+
+}
+
+/* .btn3{
+    margin-top: 60px;
+    margin-left: 150px;
+    margin-right: 50px;
+    background-color: #f51aea;
+    border-radius: 20px;
+    width: 400px;
+    height: 40px;
+} */
+ /*End of home page */
+/**/
+.heading{
+    font-size: 50px;
+    color: rgb(219, 13, 247);
+    text-align: center;
+       
+       padding-top: 20px;
+}
+.containerL{
+
+    width: 600px;
+    height: 700px;
+    background-color: white;
+    margin: auto;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    box-shadow: 10px 5px 5px rgba(121, 118, 118, 0.432);
+    border-radius: 10px;
+}
+.containerS1{
+
+    width: 600px;
+    height: 900px;
+    background-color: white;
+    margin: auto;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    box-shadow: 10px 5px 5px rgba(121, 118, 118, 0.432);
+    border-radius: 10px;
+    
+}
+    
+.containerC2{
+
+    width: 600px;
+    height: 700px;
+    background-color: rgb(247, 222, 242);
+    margin: auto;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    box-shadow: 10px 5px 5px rgba(121, 118, 118, 0.432);
+    border-radius: 10px;
+    
+        
+}
+
+.login{
+    margin-top: 20px;
+    padding-left: 75px;
+    padding-top: 20px;
+    
+}
+input{
+
+    width: 400px;
+    height: 40px;
+}
+.button{
+    margin-top: 20px;
+    margin-left: 120px;
+    padding-left: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(187, 39, 245);
+    color: white;
+    border: none;
+    
+}
+.text{
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left:80px;
+}
+.select{
+
+    width: 400px;
+    height: 40px;
+}
+select{
+   width: 400px;
+   height: 40px;
+}
+.containerC2 input{
+    margin-left: 80px;
+
+}
+.containerC2 h3{
+    margin-left: 80px;
+
+}
+.containerC2 select{
+    margin-left: 80px;
+}
+
+
+
+    
+
+
+

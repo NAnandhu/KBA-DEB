@@ -1,0 +1,88 @@
+.navbar{
+    width:auto;
+    height: 100px;
+    box-shadow: 10px 10px 5px rgba(10, 10, 10, 0.25);
+   
+   
+    
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+
+
+    
+}
+.navbar ul li{
+    font-size: 20px;
+    padding-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: large;
+}
+.containerC2{
+
+    width: 600px;
+    height: 750px;
+    background-color: rgb(247, 222, 242);
+    margin: auto;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    box-shadow: 10px 5px 5px rgba(121, 118, 118, 0.432);
+    border-radius: 10px;
+    
+        
+}
+.heading{
+    font-size: 50px;
+    color: rgb(219, 13, 247);
+    text-align: center;
+       
+       padding-top: 20px;
+}
+.input{
+
+    width: 400px;
+    height: 40px;
+}
+.button{
+    margin-top: 20px;
+    margin-left: 120px;
+    padding-left: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(187, 39, 245);
+    color: white;
+    border: none;
+    
+}
+select{
+    width: 400px;
+    height: 40px;
+ }
+ .containerC2 input{
+    width: 400px;
+    height: 40px;
+    margin-left: 80px;
+
+}
+.containerC2 h3{
+    margin-left: 80px;
+
+}
+.containerC2 select{
+    margin-left: 80px;
+}
+.containerC2 textarea{
+    width: 400px;
+    height: 50px;
+    margin-left: 80px;
+}
+
+
+
+
+
+    
+
