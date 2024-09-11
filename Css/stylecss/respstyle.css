@@ -1,0 +1,58 @@
+
+.row{
+    display: flex;
+}
+.coloum{
+    font-size: 15px;
+    width: 30%;
+    margin: 20px;
+   }
+
+    .coloum img{
+        width: 500px;
+        height: 400px;
+    }
+    .coloum p{
+        text-align: justify;
+        font-size: 20px;
+
+    }
+    .coloum h1{
+        
+        font-size: 60px;
+    }
+    .coloum span{
+        font-size: 25px;
+    }
+    
+@media only screen and (max-width:600px){
+    
+    
+   .row{
+    display:inline;
+
+   }
+   .coloum{
+    font-size: 15px;
+    width: auto;
+   }
+
+    .coloum img{
+        width: 200px;
+        height: 100px;
+    }
+    .coloum p{
+        text-align: justify;
+        font-size: 10px;
+
+    }
+    .coloum h1{
+        
+        font-size: 20px;
+    }
+    .coloum span{
+        font-size: 15px;
+    }
+
+   }
+    

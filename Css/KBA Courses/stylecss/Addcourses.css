@@ -21,6 +21,10 @@
     text-decoration: none;
     font-size: large;
 }
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 25px;
+}
 .containerC2{
 
     width: 600px;

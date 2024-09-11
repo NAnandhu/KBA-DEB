@@ -9,7 +9,17 @@
 .navbar ul {
     display: flex;
     list-style-type: none;
-    float: right;
+    float: right;.nav ul li{
+        font-size: 20px;
+        padding-left: 30px;
+        cursor: pointer;
+        text-decoration: none;
+    
+    }
+    .nav ul li a{
+        text-decoration: none;
+        font-size: 25px;
+    }
 
 
 
@@ -20,7 +30,13 @@
     padding-left: 30px;
     cursor: pointer;
     text-decoration: none;
+
 }
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 25px;
+}
+/*nav bar ending*/
 .div3{
     color: rgb(245, 6, 193);
     width: auto;

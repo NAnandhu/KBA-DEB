@@ -1,0 +1,68 @@
+.navbar{
+    width:auto;
+    height: 100px;
+    box-shadow: 10px 10px 5px rgba(10, 10, 10, 0.25);
+   
+   
+    
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+
+
+
+    
+}
+.navbar ul li{
+    font-size: 20px;
+    padding-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 25px;
+}
+.div1{
+    width: 600px;
+    height:850px;
+    margin: auto;
+    background-color: rgba(245, 170, 252, 0.863);
+    box-shadow: 10px 5px 5px rgba(121, 118, 118, 0.432);
+    border-radius: 30px;
+    padding: 20px;
+
+}
+h4{
+    font-size: 25px;
+    color: rgb(131, 4, 114);
+}
+p{
+    font-size: 20px;
+    
+}
+.rs{
+    float: right;
+    color: red;
+    margin-top: 45px;
+    margin-left: 350px;
+}
+.btn1{
+
+    width: 110px;
+    height: 40px;
+    background-color: rgb(240, 38, 247);
+    color: white;
+    left: 1200px;
+    margin-top: 30px;
+    margin-left: 400;
+    border-radius: 5px;
+    border: none;
+
+}
+.div1 ul li{
+    font-size: 20px;
+}

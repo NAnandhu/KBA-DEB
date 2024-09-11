@@ -1,0 +1,45 @@
+.navbar{
+    width:auto;
+    height: 100px;
+    box-shadow: 10px 10px 5px rgba(10, 10, 10, 0.25);
+   
+   
+    
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    float: right;
+
+
+
+    
+}
+.navbar ul li{
+    font-size: 20px;
+    padding-left: 30px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 25px;
+}
+.heading{
+    text-align: center;
+}
+.subhead{
+    font-size: 25px;
+    color: rgb(231, 29, 214);
+}
+.fcontent {
+    text-align: center;
+    display: flex;
+    margin: 40px;
+    padding: 40px;
+    margin-top: 150px;
+    margin-left: 530px; 
+    
+    
+}
