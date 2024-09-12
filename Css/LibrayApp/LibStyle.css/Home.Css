@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(/Libimages/Hp!.jpg);
+    background-image: url(/Css/LibrayApp/Libimages/Hp!.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10,7 +10,6 @@ body{
 
 
 }
-
 
 nav{
     width:auto;
