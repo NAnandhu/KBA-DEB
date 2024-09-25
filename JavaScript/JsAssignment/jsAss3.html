@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mydiv">
+        <h3>On the KBA site you created add a radio button showing your experience on KBA(like good, bad, average).</h3>
+        <br>
+        <div id="mydiv3">
+            <div id="good">
+                <label for="radio">GOOD</label>
+            </div>
+            <div id="bad">
+                <label for="radio">BAD</label>
+            </div>
+            <div id="avg">
+                <label for="radio">AVERAGE</label>
+            </div>
+
+            <div id="mydiv2">
+                <h3>Create a dropdown for programming language classes offered on html page using javascript.</h3>
+
+            </div>
+            <div id="mydiv4">
+                <h3>Create a dropdown containing name of books on the book shop page after List of Book heading.</h3>
+            </div>
+            
+        </div>
+
+        <div id="mydiv5">
+            <h3>Create a dropdown for list of cakes and print the value of second option.</h3>
+        </div>
+
+
+        <script>
+            //Program to print a para about yourself using createElement() , textContent & append child.
+            let element = document.createElement("p")
+            element.innerHTML = "Hello! I'm Anandhu Narayanan a passionate and driven Python Full Stack Developer with a strong foundation in computer science.<br>I recently graduated with a Bachelor of Computer Applications (BCA) degree in 2023 and further enhanced my skills by completing a 6-month intensive course in Python Full Stack Development."
+            document.getElementById("mydiv").appendChild(element)
+            //Make an unordered list of cinemas on html page using javascript.
+            let element1 = document.createElement("ul")
+            element1 = document.createElement("li")
+            element1.innerHTML = "ARM"
+            document.getElementById("mydiv").appendChild(element1)
+
+            element1 = document.createElement("li")
+            element1.innerHTML = "Vaazha"
+            document.getElementById("mydiv").appendChild(element1)
+
+            element1 = document.createElement("li")
+            element1.innerHTML = "Kireedam"
+            document.getElementById("mydiv").appendChild(element1)
+
+            element1 = document.createElement("li")
+            element1.innerHTML = "Kalki"
+            document.getElementById("mydiv").appendChild(element1)
+
+            //Create a dropdown for programming language classes offered on html page using javascript.
+
+            let selectprg= document.createElement("select")
+            let option1 = document.createElement("option")
+
+            option1.innerHTML = "Python"
+            selectprg.appendChild(option1)
+
+            let option2 = document.createElement("option")
+            option2.innerHTML = "HTML"
+            selectprg.appendChild(option2)
+
+            let option3 = document.createElement("option")
+            option3.innerHTML = "Java"
+            selectprg.appendChild(option3)
+            document.getElementById("mydiv2").appendChild(selectprg)
+
+            //Print your full name storing fname & lname. Print in Uppercase.
+
+            let fname = "Anandhu";
+            let lname = "Narayanan";
+            let fullname = fname + lname;
+            document.write(fullname.toUpperCase(), "<br>")
+            //On the KBA site you created add a radio button showing your experience on KBA(like good, bad, average).
+            {
+                let element = document.createElement("input");
+                element.type = "radio";
+                element.value = "good";
+                document.getElementById("good").appendChild(element);
+
+                let element1 = document.createElement("input");
+                element1.type = "radio";
+                element1.value = "bad";
+                document.getElementById("bad").appendChild(element1);
+
+                let element2 = document.createElement("input");
+                element2.type = "radio";
+                element2.value = "avg";
+                document.getElementById("avg").appendChild(element2);
+
+            }
+
+            //You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.
+
+            subs = "You can study anything if you have a will to do it"
+            document.write(subs)
+            document.write("<br>", subs.substring(0, 13))
+            document.write("<br>", subs.substring(26, 30))
+            document.write("<br>", subs.substring(36, 41))
+            document.write("<br>", subs.substring(45, 50),"<br>")
+
+
+            //“MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain.
+
+            txt = "MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation"
+
+            document.write(txt, "<br>")
+            result = txt.replaceAll("MongoDB", "Blockchain");
+            document.write(result)
+            //Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.
+
+            str = "MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation"
+
+            document.write("<br>", str.substring(0, 45), "<br>")
+            document.write("<br>", str.substr(0, 45), "<br>")
+
+            // Compare “Hello World” & “hEllO World” and display the result & its type.
+            let x = "Hello World"
+            let y = "hEllO World"
+            let z = (x && y)
+            document.write("the data type of z is ", typeof (z),"<br>")
+
+            //Create a dropdown containing name of books on the book shop page after List of Book heading.
+            {
+            let selectInp = document.createElement("select")
+            let option1 = document.createElement("option")
+
+            option1.innerHTML = "Agnisakshi"
+            selectInp.appendChild(option1)
+
+            let option2 = document.createElement("option")
+            option2.innerHTML = "Balykalasakhi"
+            selectInp.appendChild(option2)
+
+            let option3 = document.createElement("option")
+            option3.innerHTML = "indulekha"
+            selectInp.appendChild(option3)
+            document.getElementById("mydiv3").appendChild(selectInp)
+        }
+
+
+ //Create a dropdown for list of cakes and print the value of second option
+ {
+            let selectInp = document.createElement("select")
+            let option1 = document.createElement("option")
+            // first option
+            option1.innerHTML = "Chocolate"
+            selectInp.appendChild(option1)
+            // second option
+            let option2 = document.createElement("option")
+            option2.innerHTML = "white forest"
+            selectInp.appendChild(option2)
+            // third option
+            let option3 = document.createElement("option")
+            option3.innerHTML = "black forest"
+            selectInp.appendChild(option3)
+            document.getElementById("mydiv5").appendChild(selectInp,"<br>")
+
+
+        }
+    </script>
+        <h3>Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”</h3>
+
+    <script>
+
+     //Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”
+
+        {
+            let age = 20;
+            let bro_age = age + 10;
+            document.write(`I am ${age} yrs of old and my brother is 10 yrs older to me. He is now ${bro_age} years old.`);
+
+        }  
+    </script>
+      
+        <h3>Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in
+            ____(uppercase).</h3>
+        <script>
+            {
+                let fname = "Anandhu";
+                let lname = "Narayanan";
+                let name = fname + ' ' + lname;
+                let place = "Ernakulam";
+                let addName = name.toUpperCase();
+                let addPlace = place.toUpperCase()
+    
+                document.write('My name is ' + addName + '.' + ' I live in ' + addPlace);
+    
+            }  
+        </script>
+         <h3>Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't
+            like'.</h3>
+        <script>
+            {
+                let str1 = "I like to play video games."
+                let str2 = " I don’t like Hide & seek"
+                let str = str1.concat(str2)
+    
+                document.write(str);
+    
+                let result = str.replaceAll("like", "don't like");
+                document.write('<br><br>', result)
+    
+            }  
+        </script>
+        <br><br>
+
+
+    </div>
+
+</body>
+
+</html>
