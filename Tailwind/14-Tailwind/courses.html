@@ -19,9 +19,10 @@
           <a href="/Tailwind/14-Tailwind/Login.html">Logout</a>
         </div>
       </nav>
-
+      <div class="flex mt-8">
+         
         <div class="m-3">
-            <div class="col shadow-md w-96 p-3 flex flex-col items-center bg-slate-400 rounded-md">
+            <div class="col shadow-md w-96 p-3 flex flex-col items-center bg-slate-400 rounded-md shadow-indigo-700">
                 <h1 class="font-bold my-3 text-2xl  text-indigo-900">Certficate Blockchain</h1>
                 <p>Blockchain is a decentralized, distributed ledger technology that records transactions across multiple computers in a secure, transparent, and tamper-resistant way. It underpins cryptocurrencies like Bitcoin and Ethereum but also has applications in various sectors such as finance, supply chain, healthcare, and more.</p>
                 <div class="my-3 text-cyan-600">
@@ -32,5 +33,58 @@
                 </div>
             </div>
         </div>
+        <div class="m-3">
+            <div class="col shadow-md w-96 p-3 flex flex-col items-center bg-slate-400 rounded-md shadow-indigo-700">
+                <h1 class="font-bold my-3 text-2xl  text-indigo-900">Certficate Blockchain</h1>
+                <p>Blockchain is a decentralized, distributed ledger technology that records transactions across multiple computers in a secure, transparent, and tamper-resistant way. It underpins cryptocurrencies like Bitcoin and Ethereum but also has applications in various sectors such as finance, supply chain, healthcare, and more.</p>
+                <div class="my-3 text-cyan-600">
+                    <a href="">More</a>
+                </div>
+                <div>
+                   <button class="bg-indigo-800 p-2 text-white">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="mt-[180px]">
+    <h3 class="font-bold flex justify-center  text-xl">Rate our Courses</h3>
+        <div id="mydiv3" class="flex justify-center space-x-4">
+            
+          <div id="good">
+              <label for="radio" class="font-bold">GOOD</label>
+          </div>
+          <div id="bad">
+              <label for="radio"class="font-bold">BAD</label>
+          </div>
+          <div id="avg">
+              <label for="radio"class="font-bold">AVERAGE</label>
+          </div>
+        </div>
+  
+      <script>
+          {
+                  let element = document.createElement("input");
+                  element.type = "radio";
+                  element.value = "good";
+                  element.name="FeedBack"
+                  document.getElementById("good").appendChild(element);
+  
+                  let element1 = document.createElement("input");
+                  element1.type = "radio";
+                  element1.value = "bad";
+                  element1.name="FeedBack"
+  
+                  document.getElementById("bad").appendChild(element1);
+  
+                  let element2 = document.createElement("input");
+                  element2.type = "radio";
+                  element2.value = "avg";
+                  element2.name="FeedBack"
+  
+                  document.getElementById("avg").appendChild(element2);
+  
+              }
+  
+      </script>
 </body>
 </html>

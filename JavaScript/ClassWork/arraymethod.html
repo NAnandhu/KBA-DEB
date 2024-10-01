@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Array methods</h3>
+    </div>
+    <script>
+        let a=[1,2,3,4]
+        a.push(5);//add a number to the array
+        document.write(a,"<br>");
+        a.pop();//delete the last index value of array
+        document.write(a,"<br>");
+        let b=a.toString();// To convert to the string 
+        document.write("<br>",b[1]);
+        let c=[5,6,7,8];
+        let d=a.concat(c);//combain to arrays
+        document.write("<br>",d);
+
+        c.splice(2,1,2,3)//to add element into array using index position 
+        document.write("<br>",c);
+
+        let k=c.slice(2,4) //to get the element of an array into another array using index value eg(2,4)first starting pos, limit pos 
+        document.write("<br>",k);
+        document.write("<br>",c.reverse());//reverse the array 
+        document.write("<br>",c.sort())//array sort only on single digit numbers
+        let n=c.indexOf(6)//find the index value of elements
+        document.write("<br>",n);
+        document.write("<br>",c.join("*"))//append something to an array
+
+    </script>
+</body>
+</html>

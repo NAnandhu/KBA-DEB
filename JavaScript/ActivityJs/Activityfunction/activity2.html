@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Create an Object of car </h3>
+
+<script>
+    let  car = {
+        make:"ford",
+        model:"EcoSport",
+        year:2012,
+        getCarAge:function(){
+          const currentyear=2024;
+
+          let carAge=currentyear-this.year
+
+          document.write(`This car is ${carAge} year old`);
+          
+
+    
+        }
+      
+    }
+    car.getCarAge();
+</script>
+</body>
+</html>

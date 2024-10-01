@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h5>matrix 1</h5>
+
+    <script>
+        let a = [[], [], [],]
+        for (i = 0; i < 3; i++) {
+            document.write("<br>")
+            for (j = 0; j < 3; j++) {
+                a[i][j] = 1;
+                document.write(a[i][j]);
+            }
+
+        }
+    </script>
+    <h5>matrix 2</h5>
+    <script>
+        let b = [[], [], []];
+
+        for (i = 0; i < 3; i++) {
+            document.write("<br>")
+            for (j = 0; j < 4; j++) {
+                b[i][j] = 1 + i;
+                document.write(b[i][j], " ");
+
+
+            }
+
+        }
+
+    </script>
+    <br>    
+    <h5>matrix 3</h5>
+    <script>
+        let c = [[], [], []]
+        x = 2
+        for (i = 0; i < 3; i++) {
+            document.write("<br>")
+            for (j = 0; j < 4; j++) {
+                c[i][j] = x;
+                x = x + 2
+                document.write(c[i][j], " ");
+            }
+
+        }
+    </script>
+    <br>
+    <h5>Matrix adding</h5>
+    <script>
+
+        let x = a.length
+        let y = b.length
+
+        document.write("<br> the length of  a ", x, "<br> the length of  b ", y,);
+        let d = [[], [], []]
+        for (i = 0; i < 3; i++) {
+            document.write("<br>")
+            for (j = 0; j < 4; j++) {
+                d[i][j] = b[i][j] + c[i][j];
+                document.write(d[i][j], " ")
+
+
+            }
+        }
+
+    </script>
+    <br>
+<script>
+    z=c.length
+    document.write("<br> the length of  c ",z,"<br>")
+    for(i=0;i<4;i++){
+        document.write("<br>")
+        for(j=0;j<3;j++){
+            document.write(c[i][j], " ")
+
+
+        }
+    }
+
+</script>
+
+
+
+</body>
+
+</html>

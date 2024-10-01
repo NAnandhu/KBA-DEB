@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person ={
+            fullName:function(city,Country){
+                console.log(this.firstname+","+this.lastname+","+city+","+Country);
+            }
+        }
+        const person1 ={
+            firstname:"Anandhu",
+            lastname:"Narayanan"
+
+        }
+        const person2 ={
+            firstname:"Aneesh",
+            lastname:"MN"
+
+        }
+        const person3 ={
+            firstname:"Gishnu",
+            lastname:"Devadethan"
+
+        }
+        const boundFunction =person.fullName.bind(person3,"Kingston","jamaica");//bind the data  to person3 using key bind
+        person.fullName.call(person1,"Kerala","Indian");
+        person.fullName.call(person2,"NewYork","USA");
+        person.fullName.call(person3,"London","UK");
+        person.fullName.apply(person2,["london","UK"]);//apply data to person2 using key apply
+        boundFunction();
+
+
+    </script>
+</body>
+</html>

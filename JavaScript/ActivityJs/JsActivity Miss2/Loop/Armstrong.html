@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>
+            Write a program to check whether a number is armstrong or not
+        </h3>
+    </div>
+    <script>
+
+    let num=153;
+    x=num
+    res=0
+    for(;num>0;num=Math.floor(num/10)){
+        n=num%10;
+        
+        res=res+(n*n*n)
+    }
+    if(x==res){
+     document.write("<br> the number is armstrong")
+    }
+     else{
+    document.write("<br> the number is not armstrong")
+
+     }
+
+    </script>
+</body>
+</html>

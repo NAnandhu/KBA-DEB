@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>Sum of Two array</h4>
+    </div>
+    <script>
+        let a=[1,2,3,4];
+        let b=[5,6,7,8];
+        let c=[];
+        let sum=0;
+        let length=a.length
+        document.write(length,"<br>");
+
+    for(i=0;i<length;i++){
+        c[i]=a[i]+b[i];
+       
+    }
+    for(x in c){
+        document.write(c[x],",","<br>");
+    }
+
+    for(x of c){
+        document.write(x,"<br>");
+
+    }
+//sum of array using in like index
+
+    for(x in c){
+
+     sum=sum+c[x];
+    }
+    document.write("The sum of array is ",sum,"<br>");
+
+//sum of array using of like elements
+{
+ let num=0
+    for(x of c){
+     num=num+x;
+    }
+    document.write("The sum of array is ",num,"<br>");
+}
+
+    </script>
+</body>
+</html>

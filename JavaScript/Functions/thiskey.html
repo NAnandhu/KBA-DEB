@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the scope of this</title>
+</head>
+<body>
+    <h3>Check the scope of this</h3>
+    <p>Check the console for output</p>
+    <button onclick="showAlert()">show Alert</button>
+    <script>
+        console.log(this); //global window object
+
+
+        function showthis(){
+            console.log(this);
+
+        }
+        showthis();//window object
+
+        //object method context
+
+        let person={
+            name:"Bob",
+            greet:function(){
+                console.log("Hello"+this.name)
+
+            }
+           }
+           person.greet();//output Hello Bob
+
+           let arrowGreet =()=>{
+               console.log("Arrow Function this Context",this)
+           }
+        
+           arrowGreet();
+           function showAlert(){
+              window.alert("Hellow site is dangerous")
+
+              //immediately invoked function expressions
+
+           }
+           (function(){
+              console.log("Function is immediately Executed")
+           })();
+
+    </script>
+</body>
+</html>
