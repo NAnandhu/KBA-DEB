@@ -1,81 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        ul{
-            list-style: none;
-            padding: 0;
-
-        }
-        li{
-            margin: 5px 0;
-
-        }
-        button{
-            margin-left: 10px;
-            border-radius: 20px;
-        }
-    </style>
 </head>
 <body>
-    <h3>Try out localstorage </h3>
-    <input type="text" id="taskInput" placeholder="Enter Your Task">
-    <button onclick="addTask()">Add Task</button>
-    <ul id="taskList"></ul>
+    <label for="">Enter First Number</label>
+    <input type="number" id="firstno"><br>
+    <label for="">Enter Second Number</label>
+    <input type="number" id="secondno">
+    <button onclick="performCalculation()">submit</button>
+    <p id="sum"></p>
     <script>
+    function performCalculation(){
 
-        //function to add a new task
-        function addTask(){
-            const taskInput =document.getElementById('taskInput');
-            const taskvalue=taskInput.value.trim();
-            if(taskValue!==''){
-               saveTaskToLocalStorage(taskValue);
-               createTaskElement(taskValue);
-               taskInput.value='';
-         
-            }
-            function saveTaskToLocalStorage(task){
-                let task=getTasksFromLocalStorage();
-                task.push(task);
-                localStorage.setItem('tasks',JSON.stringify(task));
+        let num1=document.getElementById("firstno").value;
+        let num2=document.getElementById("secondno").value;
 
+        let sum =parseFloat(num1)+parseFloat(num2)
 
-            }
-            function getTasksFromLocalStorage(){
-                const task= localStorage.getItem('task')
-                return task? JSON.parse(task):[];
+        document.getElementById('sum').textContent=sum
 
-
-            
-            }function createTaskElement(){
-                const taskList= document.getElementById('taskList')
-                const li = document.createElement('li')
-                li.textContent=task;
-                const removeButton=document.createElement('button')
-                removeButton.onclick=function(){
-                    taskList.removeChild('li')
-
-                }
-                function removeTask(taskTORemove){
-                    let task =getTasksFromLocalStorage();
-                    task=task.filter(task=>task!==taskTORemove)
-                    localStorage.setItem("task",JSON.stringify(task))
-                }
-                window.onload=function()
-                {
-                    loadTask()
-                }
-
-        }function loadTask(){
-            const tasks=getTasksFromLocalStorage();
-            tasks.forEach(task =>{
-                createElement(task)
-            });
+        if(sum%2==0){
+            console.log("The sum of given number are  even")
         }
-    }
+        else{
+            console.log("The sum of given number are  odd")
+
+
+        }
+  }
     </script>
-</body>
-</html>
