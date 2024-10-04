@@ -9,7 +9,7 @@
 
 <body>
     <div id="mydiv">
-        <h3>On the KBA site you created add a radio button showing your experience on KBA(like good, bad, average).</h3>
+ <h3>On the KBA site you created add a radio button showing your experience on KBA(like good, bad, average).</h3>
         <br>
         <div id="mydiv3">
             <div id="good">
@@ -40,8 +40,11 @@
         <script>
             //Program to print a para about yourself using createElement() , textContent & append child.
             let element = document.createElement("p")
-            element.innerHTML = "Hello! I'm Anandhu Narayanan a passionate and driven Python Full Stack Developer with a strong foundation in computer science.<br>I recently graduated with a Bachelor of Computer Applications (BCA) degree in 2023 and further enhanced my skills by completing a 6-month intensive course in Python Full Stack Development."
+            element.textContent= "Hello! I'm Anandhu Narayanan a passionate and driven Python Full Stack Developer with a strong foundation in computer science.<br>I recently graduated with a Bachelor of Computer Applications (BCA) degree in 2023 and further enhanced my skills by completing a 6-month intensive course in Python Full Stack Development."
             document.getElementById("mydiv").appendChild(element)
+
+
+            
             //Make an unordered list of cinemas on html page using javascript.
             let element1 = document.createElement("ul")
             element1 = document.createElement("li")
@@ -134,7 +137,8 @@
             // Compare “Hello World” & “hEllO World” and display the result & its type.
             let x = "Hello World"
             let y = "hEllO World"
-            let z = (x && y)
+            let z = x .localeCompare(y) 
+            document.write(z,"<br>")
             document.write("the data type of z is ", typeof (z),"<br>")
 
             //Create a dropdown containing name of books on the book shop page after List of Book heading.

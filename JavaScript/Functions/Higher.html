@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher order function</title>
+</head>
+<body>
+    <h3>Higher order function</h3>
+    <p>check the console for output</p>
+    <script>
+        //map function
+        let number=[1,2,3,4,5];
+        let doubled= number.map(n=>n*2);
+        console.log(doubled);
+
+        //filter function
+        let even =number.filter(n=>n%2===0);
+        console.log("Even number is ",even);
+        //reduce function
+        let sum =number.reduce((total,n)=>total+n,0);
+        console.log(" sum is ",sum);
+
+        let array=new Array(5).fill(0);
+        console.log('initialized array',array)
+
+        for(let i=0;i<array.length;i++){
+            array[i]=i+1;
+        }
+        console.log('filled array',array)
+
+        let doubledarray=array.map(n=>n*2)
+        console.log('doubled array is:',doubledarray)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let greetLater = (name) => {
+            setTimeout(() => {
+                console.log("hello," + name)
+            }, 2000);
+        }
+
+        greetLater("Anandhu");
+
+
+    function greetLater1(){
+        setTimeout(() => {
+            console.log("hello," + this.name)
+        }, 2000);
+    }
+
+    let person={
+        name : "anandhu"
+    }
+
+    greetLater.call(person);
+
+
+
+
+    </script>
+</body>
+
+</html>

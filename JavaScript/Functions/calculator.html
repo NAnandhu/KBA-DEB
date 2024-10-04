@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Javascript calculator</h3>
+    <label for="">Enter first Number</label>
+    <input type="number" id="fno"><br>
+    <label for="">Enter second Number</label>
+    <input type="number" id="sno"><br>
+    <label for="operator">Enter The operator("+","-","*","/")</label>
+    <input type="text" id="operator"><br>
+    <button onclick="calculate()">Submit</button>
+    <p id="result"></p>
+    <script>
+        function calculate(){
+        let num1=parseFloat(document.getElementById("fno").value)
+        let num2=parseFloat(document.getElementById("fno").value)
+        let operator=document.getElementById("operator").value
+        let result;
+        switch(operator){
+            case "+":
+            result=num1+num2;
+            break;
+
+            case "-":
+            result=num1-num2;
+            break;
+
+            case "*":
+            result=num1*num2;
+            break;
+
+            case "/":
+            result=num1/num2;
+            break;
+            
+            default:
+                result="invalid"
+        }
+        document.getElementById("result").textContent=result;
+
+        }
+    </script>
+
+
+
+</body>
+</html>
