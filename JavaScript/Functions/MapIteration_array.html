@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function basicMapOpertions(){
+            let map =new Map();
+            map.set('name',['Anandhu','Gabin','Ashik']);
+            map.set('age','21');
+            let names =map.get('name')
+            document.getElementById('getName').innerHTML='Names :'+names.join(',');
+            document.getElementById('getAge').innerHTML='Name :'+map.get('age');
+           //Array.isArray//boolean is array or not
+           let output='';
+           map.forEach((value,key)=>{
+            if(Array.isArray(value)){
+                output += key +'='+value.join(',')+'<br>'
+            }
+            else{
+                output+=key +'='+value+'<br>'
+            }
+
+           });
+           document.getElementById('IterationsOutput').innerHTML=output;
+        }
+    </script>
+</head>
+<body>
+<h3>Map Operations</h3>
+    <h3>Map Iterations</h3>
+    <button onclick="basicMapOpertions()">Show Map Operation</button>
+    <div id="getName"></div>
+    <div id="IterationsOutput"></div>
+
+</body>
+</html>

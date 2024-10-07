@@ -10,23 +10,21 @@
     <script>
         const person1={
             firstname:"Anandhu",
-
             lastname:"Narayanan"
         }
         function printFullName() {
     document.write(`Full Name: ${this.firstname} ${this.lastname}`);
 }
 const person2={
-    firstnam:"Ashik",
+    firstname:"Ashik",
     lastname:"T Biju"
 }
 const person3={
-    firstnam:"Gabin",
+    firstname:"Gabin",
     lastname:"VS"
 }
 
 printFullName.call(person2);
-
 printFullName.apply(person3);
 const printPerson1FullName = printFullName.bind(person1);
 printPerson1FullName();

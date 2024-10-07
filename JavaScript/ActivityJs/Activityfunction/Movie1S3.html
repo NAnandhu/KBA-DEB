@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="MovieName">Enter The Movie Name</label>
+    <input type="text" id="movie"><br>
+    <label for="Priority">Enter the Priority 1,Priority-high ,2Priority-medium 3,Priority-low</label>
+    <input type="text" id="Priority">
+    <button onclick="addMovie()">Add Move</button>
+    <h3>PlayList</h3>
+    <ul id="playlist"></ul>
+
+    <script>
+        function addMovie(){
+            Moviename=document.getElementById('movie').value
+            Prioritices=document.getElementById('Priority').value
+
+
+            if(Moviename==="" && Prioritices===""){
+                document.write('Please enter both movie name and priority.')
+                return;
+
+                
+            }
+            else{
+
+            const listitems = document.createElement('li')
+            listitems.textContent=` MovieName is : ${Moviename},Priority : ${Prioritices}`;
+
+            document.getElementById('playlist').appendChild(listitems);
+
+            document.getElementById('Moviename').value = "";
+            document.getElementById('Prioritices').value = "";
+            }
+        }
+
+        document.getElementById('addMovie').addEventListener('click', addMovie);
+</script>
+</body>
+</html>
