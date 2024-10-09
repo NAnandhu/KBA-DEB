@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping chart Example</title>
+    <script>
+        function shoppingChartExample(){
+            const shoppingChart=new Map();
+            shoppingChart.set("Apple");
+            shoppingChart.set("Banana",3);
+            shoppingChart.set("Milk",1);
+            const prices ={
+                'Apple':80,
+                'Banana':50,
+                'Milk':28
+            }
+            let totalCost =0;
+            shoppingChart.forEach((quantity,item)=>{
+                totalCost+=prices[item]*quantity;
+
+            });
+            document.getElementById('totalCost').innerHTML="TotalCost : Rs "+totalCost;
+            document.getElementById('cartSize').innerHTML="Number of items : "+shoppingChart.size;
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Shopping Char Example</h3>
+    <h3>calculate total cost </h3>
+    <button onclick="shoppingChartExample()">Show Shopping char Example</button>
+    <div id="totalCost"></div>
+    <div id="cartSize"></div>
+</body>
+</html>

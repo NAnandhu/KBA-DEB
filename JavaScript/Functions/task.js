@@ -30,7 +30,7 @@ function addTask() {
                 break;
         }
         const compltButton = document.createElement('button');
-        compltButton.textContent = "Complete";
+        compltButton.textContent = "Complete"       ;
         compltButton.onclick = function(){
             li.classList.toggle('completed')
         };
@@ -46,7 +46,7 @@ function addTask() {
                 const taskIndex = tasks.indexOf(task);
                 tasks[taskIndex] = newTask; //update the respective task index in taskarray with new task
                 li.firstChild.textContent = newTask; //update the text node in DOM
-                task.newTask;
+                task=newTask;
             }
         };
         li.appendChild(editButton);
