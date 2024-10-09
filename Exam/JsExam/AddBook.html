@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .priority-high {
+            color: red,
+        }
+
+        ;
+
+        .priority-medium {
+            color: yellow;
+        }
+
+        ;
+
+        .priority-low {
+            color: green
+        }
+
+        ;
+
+        .Read {
+            color: gray; 
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Book Name</h3>
+    <label for="bookName">Enter the Book Name</label>
+    <input type="text" id="bookname"><br>
+    <label for="priority">Enter The priority (1-high ,2-medium,3-low)</label>
+    <input type="number" id="priority">
+    <button onclick="AddBook()">AddBook</button>
+    <h3>BookList</h3>
+    <ul id="Booklist"></ul>
+    <script>
+        let book = []
+        let priority = []
+        function AddBook() {
+            Bookname = document.getElementById('bookname')
+            prior = document.getElementById('priority')
+            ul = document.getElementById('Booklist')
+            bookName = Bookname.value.trim();
+            prioritys = Number(prior.value.trim());
+            bookName.value='';
+
+            book.push(bookName)
+            priority.push(prioritys)
+
+            if (bookName !== '' && !isNaN(prioritys)) {
+
+
+                switch (prioritys) {
+
+                    case 1:
+                        ul.classList.add('priority-high')
+                        break;
+
+                    case 2:
+                        ul.classList.add("priority-medium")
+                        break;
+
+                    case 3:
+                        ul.classList.add("priority-low")
+                        break;
+
+                    default:
+                        document.write("Inavlid Input");
+                }
+
+                let li = document.createElement('li')
+                li.textContent = bookName
+                ul.appendChild(li);
+
+
+                let RemoveButton = document.createElement('button')
+                RemoveButton.textContent = 'Remove'
+                RemoveButton.onclick = function () {
+                    ul.removeChild(li)
+                    li.appendChild(RemoveButton);
+                }
+                li.appendChild(RemoveButton);
+
+
+                let EditButton = document.createElement('button')
+                EditButton.textContent = 'Edit'
+                EditButton.onclick = function () {
+                    let update = prompt("Enter The Book Name", bookName)
+                    li.textContent = update;
+                    li.appendChild(RemoveButton);
+                    li.appendChild(EditButton)
+                    li.appendChild(Read)
+
+
+                }
+                li.appendChild(EditButton)
+
+                let Read = document.createElement('button')
+                Read.textContent = 'Read'
+                Read.onclick = function () {
+                    li.classList.add(Read)
+                    li.appendChild(RemoveButton);
+                    li.appendChild(EditButton)
+                    li.appendChild(Read)
+
+                }
+                li.appendChild(Read)
+
+
+
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
