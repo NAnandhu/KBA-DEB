@@ -17,7 +17,23 @@
             <th>Year</th>
         </tr>
         <tr align="center">
-            <td>Bca</td>
+            <td>Bca</td>HTTP Methods:
+
+            GET: Retrieve data from the server (e.g., get a list of users).
+            POST: Send data to the server to create a new resource (e.g., create a new blog post).
+            PUT: Update an existing resource (e.g., edit a user profile).
+            DELETE: Remove a resource from the server (e.g., delete a comment).
+            Stateless: Each request must contain all the necessary information for the server to process it. No session state is stored on the server between requests.
+            
+            Resources: Everything in a REST API is considered a resource, such as users, posts, images, etc. Resources are usually represented in a format like JSON or XML.
+            
+            Endpoints: Specific URLs where the API can be accessed. They are often structured to represent resources:
+            
+            /users (GET: retrieves users, POST: creates new user)
+            /users/{id} (GET: retrieves user by ID, PUT: updates user by ID, DELETE: deletes user by ID)
+            Status Codes: REST APIs use standard HTTP status codes to indicate the success or failure of a request:
+            
+            200 OK: Request was successful.
             <td>
                 Baselios Poulose II Catholicos College</td>
             <td>2020-2023</td>
