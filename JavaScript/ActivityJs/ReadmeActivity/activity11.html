@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter The Numbers</label>
+    <input type="text" id="numbers">
+    <p id="result"></p>
+
+    <button onclick="Revers()">Revers</button>
+
+    <script>
+        function Revers(){
+           let Numbers=document.getElementById('numbers').value
+           let ReversNo = Numbers.split('').reverse()
+           document.getElementById('result').textContent='Reversed Number is '+ReversNo;
+        }
+    </script>
+</body>
+</html>

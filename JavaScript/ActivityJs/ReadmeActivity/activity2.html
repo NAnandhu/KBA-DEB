@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <label for="">Name :</label>
+    <input type="text"><br>
+    <label for="">Address</label>
+    <input type="text">
+    </div>
+    <div>
+        <label for="">Degree:</label>
+        <label for="">Btech</label>
+        <input type="radio" name="degree" id="" onclick="add()">
+        <label for="">Mtech</label>
+        <input type="radio" name="degree" id="" onclick="add()">
+        <label for="">MCA</label>
+        <input type="radio" name="degree" id="" onclick="add()">
+        <label for="">Other</label>
+        <input type="radio"  name="degree" id="radio4" onclick="show()">      
+    </div>
+
+    <div id="ddl" class="hidden">
+        <select name="" id="">
+        <option value="">BCA</option>
+        <option value="">PGDCA</option>
+        <option value="">Bcom</option>
+        <option value="">Mphil</option></select>
+
+
+    </div>
+    <script>
+        function show(){
+            document.getElementById('ddl').classList.remove('hidden');
+        }
+        function add(){
+            document.getElementById('ddl').classList.add('hidden');
+        }
+     </script>
+    
+</body>
+</html>

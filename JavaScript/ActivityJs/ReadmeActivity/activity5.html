@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Area Of Square</h1>
+        <label for="">Enter The Side Of Square</label>
+        <input type="text" id="Area"><br>
+        <button onclick="AreaSquare()">Area Of Square</button>
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+        function AreaSquare() {
+            let side = document.getElementById('Area').value
+            let area = 4 * side;
+            document.getElementById('result').innerHTML = `Area Of Square is ${area}`;
+
+        }
+
+    </script>
+    <div>
+        <h1>Area of Rectangle</h1>
+        <label for="">Enter The length</label>
+        <input type="text" id="side1"><br>
+        <label for="">Enter The Breadth</label>
+        <input type="text" id="side2"><br>
+        <button onclick="AreaRectangle()">Area Of Rectangle</button>
+        <p id="res1"></p>
+    </div>
+    <script>
+        function AreaRectangle() {
+            let side1 = document.getElementById('side1').value
+            let side2 = document.getElementById('side2').value
+            let areaR = side1*side2;
+            document.getElementById('res1').innerHTML = `Area Of Square is ${areaR}`;
+        }
+
+    </script>
+
+<div>
+    <h1>Area Of Circle</h1>
+    <label for="">Enter The Side Of Circle</label>
+    <input type="text" id="AreaC"><br>
+    <button onclick="AreaCircle()">Area Of Circle</button>
+    <p id="res2"></p>
+
+</div>
+
+<script>
+    function AreaCircle() {
+        const PI =3.14
+        let radius = document.getElementById('AreaC').value
+        let area = PI*radius*radius;
+        document.getElementById('res2').innerHTML = `Area Of Square is ${area}`;
+
+    }
+
+</script>
+    
+</body>
+
+</html>
