@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="w-[400px] p-6">
+        <div class="mb-5">
+            <label for="large-input" class="font-bold">Enter
+                Subject Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="mb-5">
+            <label for="large-input" class="font-bold">Enter
+                Mark</label>
+            <input type="text" id="mark">
+        </div>
+
+        <div class="mb-5">
+            <button class="rounded-md bg-black px-14 py-3 text-white"" onclick="grade()">Submit</button>
+        </div>
+
+        <h1 id="display"></h1>
+
+
+
+    </div>
+
+    <script>
+
+        function grade() {
+
+
+            const sub = document.getElementById('name').value;
+            const mark = document.getElementById('mark').value;
+
+            let grade = '';
+
+            if (mark > 90) {
+                grade = 'A+';
+            }
+            else if (mark <= 90 && mark >= 80) {
+                grade = 'A'
+            }
+            else if (mark < 80 && mark >= 70) {
+                grade = 'B+'
+            }
+            else if (mark < 70 && mark >= 60) {
+                grade = 'C+'
+            }
+            else if (mark <= 60 && mark >= 50) {
+                grade = 'C'
+            }
+            else {
+                grade = 'F'
+            }
+
+            if (sub && !isNaN(mark)) {
+                document.getElementById('display').innerHTML = `Subject : ${sub} <br> Mark : ${mark} <br> Grade: ${grade}`;
+            }
+            else {
+                result.innerText = 'Please fill the fields';
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

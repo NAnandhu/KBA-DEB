@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Numbers</label><br>
+    <input type="text" id="numbers">
+    <button onclick="press()">Submit</button>
+    <div id="display"></div>
+
+    <script>
+       let numArray = []; 
+
+function press() {
+    let num = document.getElementById('numbers').value;
+
+    numArray.push(num); 
+    
+    document.getElementById('display').innerHTML ="The Enter Array is :"+ numArray.join(', ');
+}
+    </script>
+</body>
+</html>

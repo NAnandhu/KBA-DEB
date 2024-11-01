@@ -16,6 +16,7 @@
 
             const respones = await fetch("http://127.0.0.1:8080/login", {
                 method: "POST",
+                credentials:"include",
                 headers: {
                     "Content-Type": "application/json"
                 },
@@ -27,8 +28,17 @@
                 })
                 
             });
-            console.log(respones,status);
-
+            console.log(respones);
+          let data = await respones.json()
+          console.log(data);
+          
+            if(respones.status==200){
+                alert(data.message)
+                window.location.href ="./HomepageB.html"
+            }else if(respones.status==403){
+                alert(data.message)
+            }
+e
         }
 
 

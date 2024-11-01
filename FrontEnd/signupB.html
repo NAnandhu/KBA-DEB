@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <link rel="stylesheet" href="stylecss/signup.css">
-    <script>
+    <script>Saved
        async function handleSubmit(event) {
             event.preventDefault();
 
@@ -35,23 +35,23 @@
                     Role: Role
                 })
             });
-            console.log(respones,status);
+            console.log(respones);
+            let data = await respones.json()
+            console.log(data);
+            
             if(respones.status==201){
-                alert("You Have Login successfully")
-                window.location.href="./LoginB.html"
+                alert(data.Message)
+                // window.location.href="./LoginB.html"
 
             }else if(respones.status==400){
-                alert("User Already exist")
+                alert(data.message)
 
             }
             else if(respones.status==500){
                 alert("Server Error")
 
             }
-            
-
-            
-
+      
 
         }
     </script>

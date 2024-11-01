@@ -5,31 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
-    <label for="">Enter The number</label>
-    <input type="text" id="Number"><br>
-    <button onclick="largestNo()">Submit</button>
+    <div class="w-[400px] p-6">
+        <div class="mb-5">
+            <label for="large-input" >Enter
+                Number</label>
+            <input type="text" id="number">
+        </div>
+
+        <div class="mb-5">
+            <button class="rounded-md bg-black px-14 py-3 text-white" onclick="Max()">Maximum</button>
+        </div>
+
+        Array:<h1 id="display"></h1>
+
+        Maximum value : <h1 id="MaxNumber"></h1>
+
+    </div>
 
     <script>
-        function largestNo() {
 
-            let array = []
-            let num = document.getElementById('Numbers').value
-            num.split('')
-            array.push(num);
-            let max = 0
+        const data = [];
 
-            for (let i of array) {
-                if (max < i) {
-                    max = i
-                }
-                console.log(max);
+        function Max() {
 
+            const num = document.getElementById('number').value;
+            if(num.trim()!==''){
+                data.push(num);
+                document.getElementById('display').textContent=`[ ${data} ]`;
+                const max = Math.max(...data);
+                document.getElementById('MaxNumber').textContent=` ${max}`;
+                document.getElementById('number').value='';
+            }else{
+                alert('enter a number!')
             }
         }
     </script>
+
 </body>
 
 </html>

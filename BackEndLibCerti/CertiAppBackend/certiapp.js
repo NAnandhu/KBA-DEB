@@ -3,7 +3,7 @@ import { Resgister } from "./CertRouter/UserRouter.js";
 
 const CertiApp= express();
 CertiApp.use(json());
-const port= 8080;
+const port= 8000;
 
 CertiApp.use('/',Resgister)
 
