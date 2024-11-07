@@ -16,7 +16,7 @@ const userschema =new mongoose.Schema({
 
 const User= mongoose.model('UserDetaisCerti',userschema);
 
-
+mongoose.connect('mongodb://localhost:27017/CertiAppB')
 
 // const DataCourses = new Map();
 Resgister.use(json())
@@ -61,7 +61,7 @@ Resgister.post('/login',async (req, res) => {
     const data = req.body
     const { UserName,Password } = data;
     // console.log(UserName,Password)
-    const result = DataCourses.get(UserName);
+    // const result = DataCourses.get(UserName);
     console.log(result.Password);
     if (result) {
         console.log(Password,result.Password);

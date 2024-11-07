@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
     res.send("Hello world");
 
 })
+app.use('/',LibRouter)
 app.listen(port, () => {  
     
      //call back function for listen the port
