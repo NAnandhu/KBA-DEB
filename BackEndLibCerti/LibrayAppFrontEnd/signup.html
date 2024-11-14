@@ -4,8 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>add book</title>
+    <title>Signup</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        async function handleSignup(event) {
+            event.preventDefault();
+            const name = document.getElementById("Name").value;
+            const username = document.getElementById("Username").value;
+            const password = document.getElementById("password").value;
+            const role = document.getElementById("Role").value;
+            console.log(name,username,password,role);
+            try {
+                const response = await fetch("http://127.0.0.1:8000/signup", {
+                    method: "POST",
+                    credentials: "include",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        Name:name,
+                        UserName:username,
+                         Password:password , 
+                         Role:role
+                    })
+                });
+
+                console.log(response.status);
+                if (response.status === 200){
+                    alert("Successfully signed up");
+                    window.location.href = "./login.html";
+                } else if (response.status === 400) {
+                    const errorData = await response.json();
+                    alert(errorData.message || "Username already in use.");
+                } else {
+                    alert("Server error. Please try again later.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Network error. Please check your connection and try again.");
+            }
+        }
+
+    </script>
 </head>
 
 <body style="background-image: url(/Tailwind/LibrayApp/Libimages/Hp!.jpg);">
@@ -13,30 +53,35 @@
 
 
     <div class="bg-red-900 w-[500px] h-[600px] flex justify-center p-5 rounded-2xl opacity-80 mt-32">
-        <form action="">
+        <form action=""onsubmit="handleSignup(event)">
 
             <div class="p-5">
                 <h2 class="text-2xl font-bold text-center text-white">Sign Up</h2>
 
-                <p class="text-xl text-white">User Name :</p>
+                <p class="text-xl text-white">Name :</p>
 
-                <input type="text" required class="rounded-2xl  w-[350px]">
+                <input type="text" required class="rounded-2xl  w-[350px]" id="Name">
             </div>
-
                 <div class="p-5">
-                    <P class="text-xl text-white">Email:</P>
+                    <P class="text-xl text-white">UserName:</P>
 
-                    <input type="email" required class="rounded-2xl w-[350px]">
+                    <input type="text" required class="rounded-2xl w-[350px]"id="Username">
                 </div>
                 <div class="p-5">
                     <P class="text-xl text-white">Password :</P>
 
-                    <input type="text" required class="rounded-2xl  w-[350px]">
+                    <input type="text" required class="rounded-2xl  w-[350px]" id="password">
                 </div>
                 <div class="p-5">
-                    <P class="text-xl text-white">Phone No :</P>
+                    <P class="text-xl text-white">Role:</P>
 
-                    <input type="number" required class="rounded-2xl  w-[350px]">
+                    <!-- <input type="number" required class="rounded-2xl  w-[350px]"> -->
+                    <select name="" id="Role">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+
+                    </select>
+
                 </div>
                 <p class="text-xl text-white">Already have an account?<a href="/Tailwind/LibrayApp/login.html"style="margin-left: 30px;" class="text-sky-600">Login</a></p>
 
@@ -48,8 +93,6 @@
     </div>
     </form>
 </div>
-
-
 </body>
 
 </html>

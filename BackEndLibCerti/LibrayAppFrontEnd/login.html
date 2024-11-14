@@ -6,6 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        async function handleLogin(event) {
+            event.preventDefault();
+            const Username = document.getElementById("userName").value
+            const password = document.getElementById("password").value
+            console.log(Username, password)
+
+            const response = await fetch("http://127.0.0.1:8000/login",{
+                method: "POST",
+                credentials:"include",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    UserName: Username,
+                    Password: password
+                })
+      
+            })
+            console.log(response.status)
+            if (response.status == 200) {
+                alert("successfully Login")
+                window.location.href = "./Home.html"
+            } else if (response.status == 400) {
+                alert("password is incorrect")
+            }
+            else {
+                alert("user is not exist")
+            }
+        }
+      </script>
+
 </head>
 
 <body style="background-image: url(/Tailwind/LibrayApp/Libimages/Hp!.jpg);">
@@ -19,20 +51,19 @@
             <div class="p-5">
                 <h2 class="text-2xl font-bold text-center text-white">Login</h2>
 
-                <p class="text-xl text-white">Email :</p>
+                <p class="text-xl text-white">UserName:</p>
 
-                <input type="email" placeholder="enter your email" required class="rounded-2xl">
+                <input type="text" placeholder="enter your email" required class="rounded-2xl" id="userName">
             </div>
 
                 <div class="p-5">
                     <P class="text-xl text-white">password :</P>
 
-                    <input type="password" required class="rounded-2xl">
+                    <input type="password" required class="rounded-2xl" id="password">
                 </div>
          
            
-                    
-                <input type="submit" value="Login" class="w-[120px] h-[30px]  text-xl bg-red-600 rounded-2xl mt-12">
+                    <button  value="Login" class="w-[120px] h-[30px]  text-xl bg-red-600 rounded-2xl mt-12" onclick="handleLogin(event)">Login</button>
                 <a href=""class="ml-11 text-lg text-sky-600">Forget password</a>
                 <p class="p-3 text-lg"> Don't have an account?<a href="/Tailwind/LibrayApp/signup.html" class="text-sky-600"> Signup</a></p>
 
