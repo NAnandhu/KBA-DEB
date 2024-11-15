@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+    window.onload=async()=>{
+        
+        let courses=localStorage.getItem("course")
+        console.log(courses);
+        
+       const response= await fetch(`http://127.0.0.1:8000/getCourse/${courses}`,{
+            method:"GET",
+            credentials:"include",
+        });
+
+        console.log(response);
+
+        let data=await response.json()
+        console.log(data.course);
+        let items=data.course
+        document.getElementById("cname").textContent=courses
+        document.getElementById("cid").textContent=items.courseId
+        document.getElementById("prices").textContent=items.Price
+        document.getElementById("desc").textContent=items.courseDescription
+        
+        
+
+    }
+
+   async function deleteCourse(event){
+    event.preventDefault()
+    let courses=localStorage.getItem("course");
+
+   
+        const response= await fetch(`http://127.0.0.1:8000/delete/${courses}`,{
+        method:"DELETE",
+        credentials:"include",
+      })  
+
+      console.log(response);
+      const data= await response.json()
+      console.log(data);
+      if (response.status !== 404) {
+                alert(data.message);
+                // document.body.innerHTML = "<div class='flex justify-center items-center h-screen text-3xl text-gray-700'>Course has been deleted</div>";
+                window.location.href="./home.html"
+            }
+        }
+
+    
+</script>
+
+
+
+</head>
+<body class="bg-yellow-100">
+
+
+    <nav class=" p-4 bg-blue-300 flex justify-between">
+
+        <div>
+          <img src="kbalogo.png" alt="" class="w-10" >
+        </div>
+         
+          
+          <div >
+            <a href=""  class="bg-white text-blue-600 mx-3 p-2 rounded-md">Home</a>
+            <a href="Course.html"  class="hover:bg-white text-blue-600 mx-3 p-2 rounded-md">Course</a>
+            <a href="Addcourse.html"class="hover:bg-white text-blue-600 mx-3 p-2 rounded-md">Add Course</a>
+            
+            <a href="contactus.html"  class="hover:bg-white text-blue-600 mx-3 p-2 rounded-md">Contact</a>
+            <a href="login.html"  class="hover:bg-white text-blue-600 mx-3 p-2 rounded-md">LogOut</a>
+    
+          </div>
+      
+        </nav>
+
+
+    <div class="flex justify-center">
+        <div class="w-1/2 p-10 bg-gray-700 shadow-md m-5	text-white rounded-xl">
+            <h1 id="cname" class="text-3xl text-center font-bold"></h1>
+            <img class="w-full h-72" src="https://vibhuti.biz/wp-content/uploads/2024/06/Blockchain-in-hiring.png" alt="">
+            <ul class="flex justify-between my-5">
+                <li class="bg text-3xl text-sky-500 font-bold" id="cid"></li>
+                <li><span class="text-rose-600 font-bold" id="prices"></span> <button class="bg-purple-500 text-white px-3 py-1">Add to cart</button></li>
+            </ul>
+
+            <div class="my-5">
+                <h1 class="mb-4 text-3xl font-bold">Description</h1>
+                <p class="text-justify" id="desc">Blockchain is a decentralized digital ledger technology that securely records transactions across multiple computers, ensuring data integrity and transparency through cryptographic hashing. It works by linking blocks of transaction data in a chain, where each block contains a cryptographic hash of the previous block, a timestamp, and transaction details. The technology employs consensus mechanisms like Proof of Work or Proof of Stake to validate and add new blocks, enhancing security and preventing tampering.</p>
+
+            </div>
+
+            <ul class="list-disc">
+                <h1 class="text-3xl font-bold mb-4">prerequisites</h1>
+                <li><b>Computer science:</b><p>Familiarity with basic computer science concepts is important</li>
+                <li><b>Programming</b><p>Some experience working with programming languages is helpful. </p></li>
+                <li><b>Mathematics</b><p>A strong understanding of mathematics is beneficial because blockchain technology relies heavily on cryptography</p></li>
+                <li><b>Cryptography</b><p>Cryptography is an essential part of blockchain technology, and it's used to guarantee the integrity of financial transactions and prevent unauthorized users from accessing the network. 
+                </p></li>
+        
+            </ul>
+
+            <div class="flex justify-between mt-3">
+                <button class="bg-green-600  p-2"><a href="./updateCourse.html">update</a> </button>
+                <button class="bg-rose-800 p-2 " onclick="deleteCourse(event)">Delete</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

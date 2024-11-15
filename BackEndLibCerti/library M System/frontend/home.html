@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload=async(req,res)=>{
+try {
+    const response= await fetch("http://127.0.0.1:8000/viewUser",{
+                method:"GET",
+                credentials:"include"
+            });
+            console.log(response);
+
+            const data = await response.json();
+            console.log(data);
+            console.log(data.user);
+
+            if(data.user == "admin"){
+              const sign= document.getElementById("sign")
+              sign.textContent="LogOut"
+              sign.href=""
+              sign.onclick= async function(event){
+                event.preventDefault();
+              const result= await fetch("http://127.0.0.1:8000/logout",{
+                    method:"POST",
+                    credentials:"include",
+                 
+
+                });
+                 console.log(result);
+            const datas = await result.json();
+                 if(result.status  == 200){
+                    alert(datas.message)
+                    window.location.href="./signup.html"
+                 }
+
+                 
+                 
+              }
+                
+
+                 document.getElementById("sign").href="";
+
+                document.getElementById("addbook").style.display="block";
+
+
+            }
+
+    
+} catch (error) {
+    console.log(error);
+    
+}
+        
+            
+        }
+    </script>
+</head>
+<body>
+  <nav class="flex justify-between px-5 bg-sky-400 h-14">
+    <div>
+        <a href="home.html"><img src="https://cdn.pixabay.com/animation/2023/06/13/15/13/15-13-16-625_512.gif" alt="" class="w-12 object-contain"></a> 
+      </div>
+ <div class="my-3 flex">
+    <a href="" class="mx-3 text-xl text-white hover:bg-white rounded-md hover:text-sky-800 p-1 ease-in duration-300">Home</a>
+    <a href="addbook.html" id="addbook" style="display: none;" class="mx-3 text-xl text-white hover:bg-white rounded-md hover:text-sky-800 p-1 ease-in duration-300">Add Book</a>
+    <a href="viewbook.html" class="mx-3 text-xl text-white hover:bg-white rounded-md hover:text-sky-800 p-1 ease-in duration-300">View Book</a>
+    <a href="login.html" id="sign" class="mx-3 text-xl text-white hover:bg-white rounded-md hover:text-sky-800 p-1 ease-in duration-300" >SignUp</a>
+ </div>
+ 
+ </nav>
+
+<div class="relative text-white">
+    <div>
+        <img src="./images/international-day-education-cartoon-style-with-boy-student.jpg" alt="">
+    </div>
+    <div class="absolute top-28 w-2/4 ml-10">
+       <h1 class="text-5xl font-bold my-5">Welcome to the Live Library Management System</h1>
+       <p class="text-xl text-justify leading-8">Effortlessly manage your library with our all-in-one, real-time system. From book inventory tracking to member management and transaction records, our platform is designed to streamline your library's operations. Whether it's lending, returning, or updating your catalog, our system ensures a smooth, efficient, and user-friendly experience for both staff and patrons. Explore the features, stay organized, and elevate your library management today!</p>
+       <div class="my-5 ">
+        <button class="bg-yellow-500 text-xl text-black px-5 py-2 font-bold rounded-full">Get Started</button>
+    </div>
+    </div>
+
+  
+</div>
+
+
+</body>
+</html>
