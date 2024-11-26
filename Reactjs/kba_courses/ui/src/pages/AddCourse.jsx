@@ -46,12 +46,6 @@ const AddCourse = () => {
    
   }
 
-
-  
-
-
-
-  
   return (
 <>
 

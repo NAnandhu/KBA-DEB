@@ -8,13 +8,13 @@ const SignupPage = () => {
     const [userType,setUserType]=useState('admin')
     const navigate=useNavigate();
 
-    const signupSubmit = async(userDetails)=>{
+    const signupSubmit = async(data)=>{
         const res =await fetch('/api/register',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
             },
-            body:JSON.stringify(userDetails),
+            body:JSON.stringify(data),
         });
         if(res.ok){
             toast.success('signup Successfull')
@@ -32,12 +32,8 @@ const SignupPage = () => {
             email,
             userType,
         }
-        signupSubmit(userDetails)
+        signupSubmit(data)
     }
-
-
-
-
 
   return (
     <div className="bg-purple-100 flex items-center justify-center min-h-screen">
